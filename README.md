@@ -1,2 +1,2 @@
-# tareaDosEjercicioUno
-Tarea #2. Joseph Mejias Porras
+# Tarea 2. Ejercicio 1
+Joseph Mejias Porras
