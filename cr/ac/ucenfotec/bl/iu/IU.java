@@ -24,7 +24,7 @@ public class IU {
             try{
                 return Integer.parseInt(readString());
             }catch(NumberFormatException ex){
-                return 5;
+                return 6;
             }
         }else{
             return 6;

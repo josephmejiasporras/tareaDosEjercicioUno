@@ -24,7 +24,12 @@ public class Gestor {
         }
     }
 
-    public static Computadora registrarComputadora(String marca, String serie) {
+    
+    
+    
+    
+    
+    public static void registrarComputadora(String marca, String serie) {
         Computadora PC = new Computadora();
         if (getComputadoras().contains(new Computadora(marca, serie))) {
 
@@ -33,14 +38,44 @@ public class Gestor {
         } else {
             PC.setMarca(marca);
             PC.setSerie(serie);
-            getComputadoras().add(PC);
+            computadoras.add(PC);
             System.out.println("\nDispositivo Serie " + marca + " ha sido registrado con éxito");
             
         }
         
         System.out.println(PC.toString());
-        return PC;
+       
     }
+    
+    
+    
+     public static void registrarComputadora(String marca, String serie, Empleado empleado) {
+        Computadora PC = new Computadora();
+        if (getComputadoras().contains(new Computadora(marca, serie, empleado))) {
+
+            System.out.println("\nRegistro fallido. El dispositivo ya existe!");
+        
+        } else {
+            PC.setMarca(marca);
+            PC.setSerie(serie);
+            PC.setResponsable(empleado);
+            computadoras.add(PC);
+            System.out.println("\nDispositivo Serie " + marca + " ha sido registrado con éxito");
+            
+        }
+        
+        System.out.println(PC.toString());
+       
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     public static void listarEmpleados() {
         System.out.println("Lista de empleados:\n");
@@ -60,7 +95,7 @@ public class Gestor {
     public static void listarComputadoras() {
         System.out.println("Lista de computadoras:\n");
         int contador = 1;
-        for (Computadora computadora : getComputadoras()) {
+        for (Computadora computadora : computadoras) {
             System.out.println(contador + "-" + computadora.toString() + "\n");
             contador++;
         }

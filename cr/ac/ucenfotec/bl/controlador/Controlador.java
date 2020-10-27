@@ -43,7 +43,6 @@ public class Controlador {
                                 + "De lo contrario digite cualquier otra cosa.");
                         
                         if (IU.readInt() == 1) {
-                            Computadora computadora = new Computadora(inputSerie, inputMarca);
                             Gestor.listarEmpleados();
                             IU.print("\nDigite el numero del empleado:");
                             ArrayList<Empleado> lista = Gestor.getEmpleados();
@@ -52,15 +51,13 @@ public class Controlador {
                                 IU.print("Esa no es una opción válida.");
                             } else {
                                 int choice = opcion -1;
-                                Gestor.getComputadoras().add(computadora);
-                                Gestor.asignarComputadora(computadora, lista.get(choice));
-                                System.out.println(computadora);
+                                Gestor.registrarComputadora(inputMarca, inputSerie, lista.get(choice));
                             }
-                        }else{
-                            Gestor.registrarComputadora(inputSerie, inputMarca);
                         }
                         
-                    } 
+                    } else{
+                            Gestor.registrarComputadora(inputSerie, inputMarca);
+                        }
                     break;
 
                 case 4:
