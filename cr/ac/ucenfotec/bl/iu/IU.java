@@ -16,16 +16,18 @@ public class IU {
      */
     public static int showMenu(boolean check) {
         if(check){
-            System.out.println("\n***Menu***\nEliga 1 para registrar un empleado\nEliga 2 para listar los empleados\nEliga 3 para salir\n");
+            System.out.println("\n***Menu***\nEliga 1 para registrar un empleado\n"
+                    + "Eliga 2 para listar los empleados\n"
+                    + "Eliga 3 para registrar una computadora\n"
+                    + "Eliga 4 para listar las computadoras\n"
+                    + "Eliga 5 para salir\n");
             try{
                 return Integer.parseInt(readString());
             }catch(NumberFormatException ex){
-                return 4;
+                return 5;
             }
         }else{
-            System.out.println("Esa no es una opción válida/n");
-            System.out.println("Menu\nEliga 1 para registrar un empleado\nEliga 2 para listar los empleados\nEliga 3 para salir");
-           return readInt(); 
+            return 6;
         }
     }
     
@@ -41,7 +43,11 @@ public class IU {
         return input.nextLine();
     }
     public static int readInt(){
-        return input.nextInt();
+        try{
+            return Integer.parseInt(readString());
+        } catch (NumberFormatException ex){
+            return -1;
+        }
     }
     
     public void imprimir(String toPrint){
