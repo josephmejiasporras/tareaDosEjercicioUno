@@ -12,7 +12,7 @@ public class Controlador {
 
         boolean ward = true;
         while (ward) {
-            switch (IU.showMenu(ward)) {
+            switch (IU.showMenu()) {
 
                 case 1:
                     IU.print("Ingrese el nombre del Empleado");
@@ -52,7 +52,7 @@ public class Controlador {
                         }
                         
                     } else{
-                            Gestor.registrarComputadora(inputSerie, inputMarca);
+                            Gestor.registrarComputadora(inputMarca, inputSerie);
                         }
                     break;
 

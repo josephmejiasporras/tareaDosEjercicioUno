@@ -39,7 +39,6 @@ public class Gestor {
             
         }
         
-        System.out.println(PC.toString());
        
     }
     
@@ -60,7 +59,6 @@ public class Gestor {
             
         }
         
-        System.out.println(PC.toString());
        
     }
     

@@ -14,8 +14,8 @@ public class IU {
      * @param check
      * @return
      */
-    public static int showMenu(boolean check) {
-        if(check){
+    public static int showMenu() {
+        
             System.out.println("\n***Menu***\nEliga 1 para registrar un empleado\n"
                     + "Eliga 2 para listar los empleados\n"
                     + "Eliga 3 para registrar una computadora\n"
@@ -26,22 +26,17 @@ public class IU {
             }catch(NumberFormatException ex){
                 return 6;
             }
-        }else{
-            return 6;
-        }
+        
     }
     
     public static void print (String toPrint){
         System.out.println(toPrint);
     }
     
-    public static void consume(){
-        input.nextLine();
-    }
-    
     public static String readString(){
         return input.nextLine();
     }
+    
     public static int readInt(){
         try{
             return Integer.parseInt(readString());
@@ -50,7 +45,5 @@ public class IU {
         }
     }
     
-    public void imprimir(String toPrint){
-        System.out.println(toPrint);
-    }
+    
 }
